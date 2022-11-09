@@ -5,15 +5,12 @@ package day05;
 //第二个决定了列
 public class MultiTable {
     public static void main(String[] args) {
-        System.out.println("九九乘法表如下：");
-        for(int i=1;i<=9;i++){//控制行
-            for (int j=1;j<=i;j++){//控制列
+        System.out.println("九九算术乘法表如下：");
+        for (int i=1;i<10;i++){
+            for(int j=1;j<=i;j++){
                 System.out.print(i+"*"+j+"="+i*j+"\t");
-                //println输出后自动换行
-                //print 输出不换行
-                //\t:一个\t占8位数
             }
-            System.out.println();//什么都不写运算时换行
+            System.out.println();
         }
 
       /*  for(int a=1;a<=10;a++){//10
