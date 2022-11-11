@@ -1,5 +1,5 @@
 package day06;
-//数组元素的最大值
+//数组元素的最大值,并且放在末尾的下一个位置
 import java.util.Arrays;
 public class MaxOfArray {
     public static void main(String[] args) {
