@@ -1,6 +1,8 @@
 package day06;
 
 import java.util.Arrays;
+import java.util.Scanner;
+
 public class TextDay06 {
     public static void main(String[] args) {
         System.out.println("第一种复制方法：");
@@ -104,7 +106,70 @@ public class TextDay06 {
         System.out.println("方法的嵌套：");
         System.out.println("我的饮食习惯：");
         like();
+
+
+        System.out.println();
+        //键盘输入，数组排序
+        //同时运用Arrays.toString(数组名)进行输出
+        //System.out.println(Arrays.toString(数组名));
+        //如果是 String str=Arrays.toString(数组名);则写死了因为这样子，后期输出str是个变量，是一个字符串
+        //他是进行将数组的元素进行赋值给str字符串变量，后输出字符串
+        int[] trr=new int[10];
+        Scanner scan=new Scanner(System.in);
+        for(int i=0;i<trr.length;i++){
+            trr[i]=scan.nextInt();
+        }
+
+        System.out.println("未排序数组："+Arrays.toString(trr));
+        Arrays.sort(trr);
+        System.out.println("排序后数组（升序）："+Arrays.toString(trr));
+        System.out.println();
+
+
+        //第二遍练习
+        //复制第一种方法
+        System.out.println("复制第一种方法");
+        int[] qrr=new int[10];
+        for (int i=0;i<qrr.length;i++){
+            qrr[i]=(int)(Math.random()*100+1);
+        }
+        System.out.println("qrr数组："+Arrays.toString(qrr));
+        int[] err=Arrays.copyOf(qrr,10);
+        System.out.println("err数组(复制数组)："+Arrays.toString(err));
+        System.out.println();
+        System.out.println("复制第二中方法");
+        int[] urr=new int[10];
+        for (int i=0;i<urr.length;i++){
+            urr[i]=(int)(Math.random()*100+1);
+        }
+        System.out.println("urr数组："+Arrays.toString(urr));
+        int[] prr=new int[20];
+        System.arraycopy(urr,0,prr,4,10);
+        System.out.println("prr数组："+Arrays.toString(prr));
+        System.out.println();
+        //求最大值，且最大值放置在原数组最后一个位置
+
+        int[] nrr=new int[5];
+        Scanner scan1=new Scanner(System.in);
+        for (int i=0;i<nrr.length;i++){
+            nrr[i]=scan1.nextInt();
+        }
+        System.out.println("nrr数组："+Arrays.toString(nrr));
+        int max1 = nrr[0];
+        for(int i=1;i<nrr.length;i++){
+            if(max1<nrr[i]){
+                max1=nrr[i];
+            }
+        }
+        System.out.println("nrr数组最大值为max1："+max1);
+        nrr=Arrays.copyOf(nrr,nrr.length+1);
+        nrr[nrr.length-1]=max1;
+        System.out.println("新的nrr数组为："+Arrays.toString(nrr));
+        Arrays.sort(nrr);
+        System.out.println("新的nrr数组并且排序（升序）为："+Arrays.toString(nrr));
     }
+
+
     public static void say(){
         System.out.println("大家好，我叫wjw，今年我22岁了");
     }
