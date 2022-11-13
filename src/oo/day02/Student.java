@@ -5,12 +5,14 @@ public class Student {//class关键字
     String name;
     int age;
     String address;
+
     //构造方法
     Student(String name,int age,String address){
         this.name=name;//zs.name="zhangsan"
         this.age=age;//zs.age=18
         this.address=address;//zs.address="福州"
     }
+
     //方法
     void study(){
         System.out.println(name+"在学习....");

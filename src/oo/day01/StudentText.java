@@ -12,6 +12,7 @@ public class StudentText {
         lisi.name="lisi";
         lisi.age=50;
         lisi.address="福州永泰";
+
         //调用方法
         lisi.study();
         lisi.sayHi();
