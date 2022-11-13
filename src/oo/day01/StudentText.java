@@ -20,7 +20,7 @@ public class StudentText {
 
         //1)创建一个学生对象
         //2）给予默认值
-        //3）明天说
+        //3）调用构造方法，（）就是方法，前面是方法名
         Student ww=new Student();
         /*
         byte short int long double float char 默认值为0
