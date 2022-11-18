@@ -1,4 +1,4 @@
-package ooday04;
+package ooday03text;
 
 public class Person {
     String name;
